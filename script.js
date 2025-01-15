@@ -17,3 +17,5 @@ function updateTimer{
 }
 
 updateTimer();
+
+setInterval(updateTimer,1000); //after every 1 second updateTimer will get called
