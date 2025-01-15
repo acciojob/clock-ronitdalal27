@@ -10,7 +10,7 @@ function updateTimer{
 	const minutes = String(date.getminutes()).padStart(2,"0");
 	const seconds = String(date.getSeconds()).padStart(2,"0");
 
-	const formatedTime = month+"/"+date+"/"year+","+hours+":"+minutes+":"+seconds+"PM";
+	const formatedTime = month+"/"+day+"/"year+","+hours+":"+minutes+":"+seconds+"PM";
 
 	timer.textContent = formatedTime;
 }
