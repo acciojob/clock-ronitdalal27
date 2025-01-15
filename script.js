@@ -7,10 +7,11 @@ function updateTimer{
 	const month = String(date.getMonth()+1).padStart(2,"0"); //bcoz Date() function takes month from 0 so +1 and padstart is to make single month look 07 instead of 7
 	const day = String(date.getDate()).padStart(2,"0");
 	const hours = date.getHours();
+	const formatedHours = hours%12 || 12;
 	const minutes = String(date.getminutes()).padStart(2,"0");
 	const seconds = String(date.getSeconds()).padStart(2,"0");
 	const ampm = hours>=12 ? "PM" : "AM";
-	const formatedTime = `${month}/${day}/${year},${hours}:${minutes}:${seconds} ${ampm}`
+	const formatedTime = `${month}/${day}/${year},${formatedHours}:${minutes}:${seconds} ${ampm}`;
 
 	timer.textContent = formatedTime;
 }
