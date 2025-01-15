@@ -9,8 +9,8 @@ function updateTimer{
 	const hours = date.getHours();
 	const minutes = String(date.getminutes()).padStart(2,"0");
 	const seconds = String(date.getSeconds()).padStart(2,"0");
-
-	const formatedTime = month+"/"+day+"/"year+","+hours+":"+minutes+":"+seconds+"PM";
+	const ampm = hours>=12 : "PM" : "AM";
+	const formatedTime = month+"/"+day+"/"year+","+hours+":"+minutes+":"+seconds+ampm;
 
 	timer.textContent = formatedTime;
 }
